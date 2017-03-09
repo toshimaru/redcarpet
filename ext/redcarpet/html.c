@@ -314,7 +314,7 @@ rndr_header_anchor(struct buf *out, const struct buf *anchor)
 		for (i = 0; i < size; ++i) {
 			hash = ((hash << 5) + hash) + a[i]; /* h * 33 + c */
 		}
-		bufprintf(out, "part-%lx", hash);
+		bufprintf(out, "h-%lx", hash);
 	}
 }
 
